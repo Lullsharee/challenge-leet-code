@@ -6,7 +6,12 @@ int main() {
   string S,T;
   cin >> S >> T;
   sort(S.begin(), S.end());
-  bool ans = false;
-  for () // 計算処理中
-  cout << S  << endl;
+  sort(T.begin(), T.end());
+  reverse(T.begin(), T.end());
+  // bool ans = false;
+  if (S < T) {
+    cout << "Yes" << endl;
+  } else {
+    cout << "No" << endl;
+  }
 }
