@@ -6,16 +6,16 @@ using namespace std;
 int maxArea(vector<int>& height) {
   int ans = 0;
 
-    int left = 0, right = height.size() - 1;
-    while (left != right) {
-      int current_area = min(height[left], height[right]) * (right - left);
-      if (current_area > ans) ans = current_area;
-      if (height[left] < height[right]) {
-        left++;
-      } else {
-        right--;
-      }
+  int left = 0, right = height.size() - 1;
+  while (left != right) {
+    int current_area = min(height[left], height[right]) * (right - left);
+    if (current_area > ans) ans = current_area;
+    if (height[left] < height[right]) {
+      left++;
+    } else {
+      right--;
     }
+  }
   return ans;
 }
 
